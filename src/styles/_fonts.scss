@@ -1,0 +1,44 @@
+@font-face {
+    font-family: "popReg";
+    src: url("../assets/fonts/Poppins-Regular.ttf");
+}
+
+.popReg {
+    font-family: "popReg" !important;
+}
+
+@font-face {
+    font-family: "popLight";
+    src: url("../assets/fonts/Poppins-ExtraLight.ttf");
+}
+
+.popLight {
+    font-family: "popLight" !important;
+}
+
+@font-face {
+    font-family: "popBold";
+    src: url("../assets/fonts/Poppins-Bold.ttf");
+}
+
+.popBold{
+    font-family: "popBold" !important;
+}
+
+@font-face {
+    font-family: "festive";
+    src: url("../assets/fonts/Festive-Regular.ttf");
+}
+
+.festive {
+    font-family: "festive" !important;
+}
+
+@font-face {
+    font-family: "inter";
+    src: url("../assets/fonts/Inter-VariableFont_slnt\,wght.ttf");
+}
+
+.inter {
+    font-family: "inter" !important;
+}
