@@ -4,7 +4,11 @@ import "./_home.scss";
 export const Home = () => {
   return (
     <>
-      <h1 className="text-red">Hello to HOME</h1>
+      <div className="home">
+        <div className="homeHero">
+            <h1>TEST</h1>
+        </div>
+      </div>
     </>
   );
 };
