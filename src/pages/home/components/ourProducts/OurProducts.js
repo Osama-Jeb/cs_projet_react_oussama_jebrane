@@ -45,7 +45,7 @@ export const OurProducts = () => {
 
     return (
         <>
-            <div className="ourProducts d-flex align-items-center flex-column ">
+            <div className="ourProducts d-flex align-items-center flex-column p-3 ">
                 <h1>OUR PRODUCTS</h1>
                 <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                     <li class="nav-item" role="presentation">

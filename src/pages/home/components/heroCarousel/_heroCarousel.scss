@@ -1,18 +1,10 @@
 .heroCarousel{
-    margin-top: 7vw;
-    .active{
-        position: relative;
+    margin-top: 4vw;
+    .carousel-item{
+        height: 75vh;
         .heroText{
-            position: absolute;
-            width: 100%;
-            top: -15vw ;
-            left: 0%;
             color: white;
-            h1{
-                border-bottom: 4px solid white;
-                width: fit-content;
-                margin-left: 35%;
-            }
+            margin-bottom: 30vh;
         }
     }
 }

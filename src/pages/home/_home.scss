@@ -1,13 +1,15 @@
 .home{
-    .homeHero{
-        background-image: url("../../assets/images/heroCaro1.jpg");
-        height: 75vh;
+    .modVideo{
+        background-image: url("../../assets/images/gallery-13.jpg");
+        height: 70vh;
+        background-repeat: no-repeat;
+        background-size: cover;
         background-position: center;
         background-attachment: fixed;
-        background-repeat: no-repeat;
-        h1{
-            font-size: 5rem;
-            font-weight: bolder;
-        }
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
     }
 }

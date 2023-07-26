@@ -9,6 +9,7 @@ import { Fav } from "./pages/fav/Fav";
 import { Basket } from "./pages/basket/Basket";
 import { Product } from "./pages/product/Product";
 import { allProducts } from "./variables";
+import { Footer } from "./layouts/footer/Footer";
 
 //! REMEMBER TO CHANGE IMAGES FROM Px TO VW FOR RESPONSIVITY
 
@@ -35,6 +36,7 @@ export const App = () => {
           <Route path="/basket" element={<Basket />} />
           <Route path="/product" element={<Product />} />
         </Routes>
+        <Footer />
       </Info.Provider>
     </>
   );
