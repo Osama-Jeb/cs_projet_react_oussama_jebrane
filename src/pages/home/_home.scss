@@ -1,8 +1,13 @@
 .home{
     .homeHero{
-        background-image: url("../../assets/images/heroImg.jpg");
+        background-image: url("../../assets/images/heroCaro1.jpg");
         height: 75vh;
         background-position: center;
-
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        h1{
+            font-size: 5rem;
+            font-weight: bolder;
+        }
     }
 }

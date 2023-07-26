@@ -1,0 +1,18 @@
+.prodCard{
+    position: relative;
+    height: 375px;
+    width: 300px;
+    img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+    button{
+        position: absolute;
+        top: 5%;
+        left: 5%;
+    }
+    p{
+        margin-left: 5%;
+    }
+}
