@@ -1,6 +1,5 @@
 import { NavLink } from "react-router-dom";
 import "./_navigation.scss";
-import { AiOutlineHeart, AiOutlineShopping } from "react-icons/ai"
 import { FavDropDown } from "./dropdown/FavDropDown";
 import { BasketDropDown } from "./dropdown/BasketDropDown";
 

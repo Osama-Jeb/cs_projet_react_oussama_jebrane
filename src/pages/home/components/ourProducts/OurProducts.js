@@ -49,16 +49,16 @@ export const OurProducts = () => {
                 <h1>OUR PRODUCTS</h1>
                 <ul className="nav nav-pills mb-3" id="pills-tab" role="tablist">
                     <li className="nav-item" role="presentation">
-                        <button className=" active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Best Seller</button>
+                        <button className="prodBtn active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Best Seller</button>
                     </li>
                     <li className="nav-item" role="presentation">
-                        <button className="" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">New</button>
+                        <button className="prodBtn" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">New</button>
                     </li>
                     <li className="nav-item" role="presentation">
-                        <button className="" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Old</button>
+                        <button className="prodBtn" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Old</button>
                     </li>
                     <li className="nav-item" role="presentation">
-                        <button className="" id="pills-extra-tab" data-bs-toggle="pill" data-bs-target="#pills-extra" type="button" role="tab" aria-controls="pills-extra" aria-selected="false">Sale</button>
+                        <button className="prodBtn" id="pills-extra-tab" data-bs-toggle="pill" data-bs-target="#pills-extra" type="button" role="tab" aria-controls="pills-extra" aria-selected="false">Sale</button>
                     </li>
                 </ul>
                 <div className="tab-content" id="pills-tabContent">

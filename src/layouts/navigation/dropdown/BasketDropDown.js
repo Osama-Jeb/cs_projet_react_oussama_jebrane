@@ -7,10 +7,9 @@ import { NavLink } from "react-router-dom";
 
 
 export const BasketDropDown = () => {
-    
+
 
     const allValues = useContext(Info);
-    const allInfo = allValues.allInfo[0]
     const [basketProd, setBasketProd] = allValues.basketProd;
     const [showBasket, setShowBasket] = allValues.showBasket;
 
@@ -18,7 +17,7 @@ export const BasketDropDown = () => {
         <>
             <div className="basketDropdown">
                 <div className="iconHolder">
-                    <button className="basketBtn btn" onClick={(event) =>{
+                    <button className="basketBtn btn" onClick={(event) => {
                         allValues.changeShowDrop(event)
                     }}>
                         <h4><AiOutlineShopping className="basketBtn" /></h4>
@@ -35,14 +34,14 @@ export const BasketDropDown = () => {
                                 exit={{ opacity: 0, y: -100 }}
                             >
                                 {
-                                    basketProd.length !== 0 ?
+                                    basketProd.length === 0 ?
                                         <>
                                             <h1>Add To Cart</h1>
                                         </>
                                         :
                                         <>
                                             {
-                                                allInfo.map((element, index) =>
+                                                basketProd.map((element, index) =>
                                                     <>
                                                         <div className="basketItem d-flex align-items-center gap-1">
                                                             <img src={element.src} alt="" />
