@@ -7,28 +7,31 @@ import { NavLink } from "react-router-dom";
 import { Info } from "../../../App";
 
 export const FavDropDown = () => {
-    const [showDrop, setShowDrop] = useState(true);
+
     const allValues = useContext(Info);
     const [favProd, setFavProd] = allValues.favProd;
+    const [showFav, setShowFav] = allValues.showFav;
 
-    const changeShow = () => {
-        setShowDrop(!showDrop)
-    }
+
 
     const removeFav = () => {
-        
+
     }
 
     return (
         <>
-            <div className="dropdown">
-                <button className="btn" onClick={changeShow}>
-                    <AiOutlineHeart />
+            <div className="favDropdown">
+                <button className="favBtn btn" onClick={(event) =>{
+                    allValues.changeShowDrop(event)
+                }}>
+                    <h4>
+                        <AiOutlineHeart className="favBtn" />
+                    </h4>
                 </button>
                 <AnimatePresence>
                     {
-                        showDrop && <>
-                            <motion.div className="menu"
+                        showFav && <>
+                            <motion.div className="favMenu"
                                 initial={{ y: -100, opacity: 0 }}
                                 animate={{ y: 10, opacity: 1 }}
                                 transition={{ delay: 0.25, duration: 0.5 }}

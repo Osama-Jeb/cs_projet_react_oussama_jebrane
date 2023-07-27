@@ -18,11 +18,41 @@ export const App = () => {
 
   const [allInfo, setAllInfo] = useState(allProducts);
   const [favProd, setFavProd] = useState([]);
+  const [basketProd, setBasketProd] = useState([])
+  const [showFav, setShowFav] = useState(false);
+  const [showBasket, setShowBasket] = useState(false);
 
+  const changeShowDrop = (event) => {
+    switch (event.target.classList[0]) {
+      case "favBtn":
+        if (showFav) {
+          setShowFav(false)
+        } else {
+          setShowFav(true);
+          setShowBasket(false)
+        }
+        break;
+      case "basketBtn":
+        if (showBasket) {
+          setShowBasket(false)
+        } else {
+          setShowBasket(true);
+          setShowFav(false)
+        }
+        break;
+
+      default:
+        break;
+    }
+  }
 
   const allValues = {
     allInfo: [allInfo, setAllInfo],
-    favProd : [favProd, setFavProd],
+    favProd: [favProd, setFavProd],
+    basketProd: [basketProd, setBasketProd],
+    showFav: [showFav, setShowFav],
+    showBasket: [showBasket, setShowBasket],
+    changeShowDrop: changeShowDrop,
   }
 
   return (
