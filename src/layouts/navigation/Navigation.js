@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import "./_navigation.scss";
-import {AiOutlineHeart, AiOutlineShopping} from "react-icons/ai"
+import { AiOutlineHeart, AiOutlineShopping } from "react-icons/ai"
 
 export const Navigation = () => {
     const myNavs = ["Home", "About", "Contact", "Product"]
@@ -11,15 +11,19 @@ export const Navigation = () => {
                 <div className="d-flex align-items-center gap-3">
                     {
                         myNavs.map((element, index) =>
-                        <>
-                            <NavLink to={index === 0 ? "/" : `/${element.toLowerCase()}`}>{element}</NavLink>
-                        </>
+                            <>
+                                <NavLink to={index === 0 ? "/" : `/${element.toLowerCase()}`}>{element}</NavLink>
+                            </>
                         )
                     }
                 </div>
                 <div className="d-flex gap-1">
-                    <AiOutlineHeart />
-                    <AiOutlineShopping />
+                    <NavLink to={"/fav"}>
+                        <AiOutlineHeart />
+                    </NavLink>
+                    <NavLink to={"/basket"}>
+                        <AiOutlineShopping />
+                    </NavLink>
                 </div>
             </nav>
         </>

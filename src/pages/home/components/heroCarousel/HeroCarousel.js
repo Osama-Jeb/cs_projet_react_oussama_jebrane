@@ -16,6 +16,7 @@ export const HeroCarousel = () => {
                             <div className="carousel-caption d-none d-md-block">
                                 <div className="heroText">
                                     <h1>First slide label</h1>
+                                    <p>New Stuff</p>
                                     <button className="btn btn-light rounded-pill ps-2 pe-2 fs-5">Shop 1</button>
                                 </div>
                             </div>
@@ -25,6 +26,7 @@ export const HeroCarousel = () => {
                             <div className="carousel-caption d-none d-md-block">
                                 <div className="heroText">
                                     <h1>Second slide label</h1>
+                                    <p>New Stuff</p>
                                     <button className="btn btn-light rounded-pill ps-1 pe-1">Shop 2</button>
                                 </div>
 
@@ -35,6 +37,7 @@ export const HeroCarousel = () => {
                             <div className="carousel-caption d-none d-md-block">
                                 <div className="heroText">
                                     <h1>Third slide label</h1>
+                                    <p>New Stuff</p>
                                     <button className="btn btn-light rounded-pill ps-1 pe-1">Shop 3</button>
                                 </div>
                             </div>

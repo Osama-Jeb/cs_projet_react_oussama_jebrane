@@ -6,7 +6,7 @@ export const Footer = () => {
     return (
         <>
             <footer className="bg-gray">
-                <div className="footerLinks d-flex flex-column flex-lg-row gap-3 justify-content-between">
+                <div className="footerLinks p-3 d-flex flex-column flex-lg-row gap-3 justify-content-between">
                     <div className="inTouch d-flex flex-column align-items-center">
                         <h4>GET IN TOUCH</h4>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, aliquid!</p>
