@@ -1,5 +1,5 @@
-.productGroup{
-    button{
+.productGroup {
+    button {
         background-color: transparent;
         outline: none;
         border: none;
@@ -7,13 +7,16 @@
         text-align: start;
         width: fit-content;
     }
-    .active{
+
+    .active {
         transition: all 0.5s;
         border-bottom: 2px solid #111111;
     }
-    .tab-pane{
+
+    .tab-pane {
         border-bottom: none !important;
-        .allProd{
+
+        .allProd {
             display: grid;
             grid-template-columns: repeat(3, 350px);
             grid-template-rows: 400px;

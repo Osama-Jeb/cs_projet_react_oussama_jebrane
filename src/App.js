@@ -17,10 +17,12 @@ export const Info = createContext();
 export const App = () => {
 
   const [allInfo, setAllInfo] = useState(allProducts);
+  const [favProd, setFavProd] = useState([]);
 
 
   const allValues = {
     allInfo: [allInfo, setAllInfo],
+    favProd : [favProd, setFavProd],
   }
 
   return (

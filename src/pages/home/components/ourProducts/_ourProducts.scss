@@ -1,3 +1,16 @@
-// .ourProducts{
+.ourProducts {
+    button {
+        background-color: white;
+        outline: none;
+        border: none;
+    }
 
-// }
+    .active {
+        border-bottom: 2px solid black;
+    }
+
+    .holder {
+        border: none !important;
+    }
+
+}

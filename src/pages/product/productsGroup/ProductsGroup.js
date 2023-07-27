@@ -56,8 +56,8 @@ export const ProductsGroup = () => {
                         <button className="" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">Kids</button>
 
                         {/* SEARCHING FOR THINGS */}
-                        <input className="mt-1 rounded-pill ps-1 pe-1 text-center" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true" 
-                        placeholder="Search&#128269;"
+                        <input className="mt-1 rounded-pill ps-1 pe-1 text-center" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true"
+                            placeholder="Search&#128269;"
 
                             type="text" onChange={(event) => {
                                 findItem(event)
@@ -81,9 +81,9 @@ export const ProductsGroup = () => {
                                         <>
                                             {
                                                 search.map((element, index) =>
-                                                <>
-                                                    <Card myObject={element} />
-                                                </>
+                                                    <>
+                                                        <Card myObject={element} />
+                                                    </>
                                                 )
                                             }
                                         </>

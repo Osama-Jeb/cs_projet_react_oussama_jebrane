@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 import "./_navigation.scss";
 import { AiOutlineHeart, AiOutlineShopping } from "react-icons/ai"
+import { FavDropDown } from "./dropdown/FavDropDown";
 
 export const Navigation = () => {
     const myNavs = ["Home", "About", "Contact", "Product"]
@@ -18,12 +19,11 @@ export const Navigation = () => {
                     }
                 </div>
                 <div className="d-flex gap-1">
-                    <NavLink to={"/fav"}>
+                    {/* <NavLink to={"/fav"}>
                         <AiOutlineHeart />
                     </NavLink>
-                    <NavLink to={"/basket"}>
-                        <AiOutlineShopping />
-                    </NavLink>
+                   */}
+                    <FavDropDown />
                 </div>
             </nav>
         </>
