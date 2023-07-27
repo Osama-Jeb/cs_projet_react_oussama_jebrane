@@ -1,22 +1,26 @@
-.prodCard{
+.prodCard {
     position: relative;
-    height: 375px;
-    width: 300px;
+    height: 333px;
+    width: 275px;
     transition: all 0.5s;
-    img{
+
+    img {
         height: 100%;
         width: 100%;
         object-fit: cover;
     }
-    button{
+
+    button {
         position: absolute;
         top: 5%;
         left: 5%;
     }
-    p{
+
+    p {
         margin-left: 5%;
     }
-    .darkness{
+
+    .darkness {
         position: absolute;
         top: 0;
         height: 100%;
@@ -24,12 +28,14 @@
         background-color: black;
         opacity: 0;
     }
-    .text{
+
+    .text {
         position: absolute;
         width: 100%;
         height: 100%;
         color: transparent;
-        .icons{
+
+        .icons {
             top: 5%;
             right: 5%;
             position: absolute;
@@ -37,14 +43,14 @@
     }
 }
 
-.prodCard:hover{
+.prodCard:hover {
     transform: scale(1.1);
 }
 
-.prodCard:hover .darkness{
+.prodCard:hover .darkness {
     opacity: 0.5;
 }
 
-.prodCard:hover .text{
+.prodCard:hover .text {
     color: white;
 }

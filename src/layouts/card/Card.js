@@ -20,7 +20,7 @@ export const Card = (props) => {
                 </div>
                 <img src={props.myObject.src} alt="" />
                 <button className="btn btn-primary rounded-pill">{props.myObject.tag}</button>
-                <p>{props.myObject.name}</p>
+                <p>{props.myObject.categorie}: {props.myObject.name}</p>
                 <p>{props.myObject.price} $</p>
             </div>
         </>

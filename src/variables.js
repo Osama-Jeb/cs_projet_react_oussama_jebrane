@@ -16,11 +16,11 @@ const prod = (name, src, price, tag, categorie, sold, desc) => ({
 });
 
 const product1 = prod("prod1", prod1, 100, "best seller", "men", false, "prod1 desc" )
-const product2 = prod("prod2", prod2, 100, "old", "men", false, "prod2 desc" )
-const product3 = prod("prod1", prod3, 100, "new", "men", false, "prod3 desc" )
-const product4 = prod("prod1", prod4, 100, "old", "men", false, "prod4 desc" )
-const product5 = prod("prod1", prod5, 100, "sale", "men", false, "prod5 desc" )
-const product6 = prod("prod1", prod6, 100, "best seller", "men", false, "prod6 desc" )
+const product2 = prod("prod2", prod2, 100, "old", "wommen", false, "prod2 desc" )
+const product3 = prod("prod3", prod3, 100, "new", "men", false, "prod3 desc" )
+const product4 = prod("prod4", prod4, 100, "old", "kids", false, "prod4 desc" )
+const product5 = prod("prod5", prod5, 100, "sale", "men", false, "prod5 desc" )
+const product6 = prod("prod6", prod6, 100, "best seller", "women", false, "prod6 desc" )
 
 export const allProducts= [product1, product2,product3,product4,product5,product6];
 
