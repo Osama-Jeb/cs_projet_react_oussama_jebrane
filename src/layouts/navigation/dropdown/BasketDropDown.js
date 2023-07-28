@@ -48,7 +48,7 @@ export const BasketDropDown = () => {
                                                             <div className="">
                                                                 <h4 className="fw-bold text-uppercase">{element.name}</h4>
                                                                 <p>{element.desc}</p>
-                                                                <p>amount * price</p>
+                                                                <p>{element.amount * element.price}</p>
                                                             </div>
                                                         </div>
                                                     </>
@@ -58,7 +58,9 @@ export const BasketDropDown = () => {
                                 }
                                 <div className="d-flex gap-1 align-items-center justify-content-center">
                                     <NavLink to={"/basket"}>
-                                        <button className="btn btn-dark text-light rounded-pill ps-1 pe-1">
+                                        <button className="btn btn-dark text-light rounded-pill ps-1 pe-1" onClick={()=>{
+                                            setShowBasket(false)
+                                        }}>
                                             Go To Your Basket
                                         </button>
                                     </NavLink>

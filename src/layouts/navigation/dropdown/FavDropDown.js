@@ -14,8 +14,11 @@ export const FavDropDown = () => {
 
 
 
-    const removeFav = () => {
-
+    const removeFav = (element) => {
+        let newArr = [...favProd]
+        let findIndexItem = favProd.filter(el => el.name === element.name);
+        newArr.splice(findIndexItem, 1);
+        setFavProd(newArr);
     }
 
     return (
@@ -46,7 +49,9 @@ export const FavDropDown = () => {
                                                 <div className="d-flex align-items-center flex-column">
                                                     <h4 className="fw-bold text-uppercase">{element.name}</h4>
                                                     <div className="d-flex w-100  gap-1 justify-content-center">
-                                                        <button className="btn text-danger">
+                                                        <button className="btn text-danger" onClick={() =>{
+                                                            removeFav(element)
+                                                        }}>
                                                             <FaHeartBroken />
                                                         </button>
                                                     </div>
@@ -57,7 +62,9 @@ export const FavDropDown = () => {
                                 }
                                 <div className="d-flex justify-content-center">
                                     <NavLink to={"/fav"}>
-                                        <button className="btn btn-dark text-light rounded-pill ps-1 pe-1">
+                                        <button className="btn btn-dark text-light rounded-pill ps-1 pe-1" onClick={() =>{
+                                            setShowFav(false);
+                                        }}>
                                             Go To Favorites
                                         </button>
                                     </NavLink>

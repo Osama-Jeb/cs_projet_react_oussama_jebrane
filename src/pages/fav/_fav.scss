@@ -1,0 +1,21 @@
+.favPage {
+    .favItems {
+        border: 1px solid rgb(189, 189, 189);
+        padding: 10px;
+        display: flex;
+        align-items: center;
+
+        img {
+            height: 20vh;
+            width: 10vw;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+        .favBtn{
+            background-color: rgb(170, 170, 170);
+            color: white;
+            font-size: larger;
+            font-weight: bold;
+        }
+    }
+}

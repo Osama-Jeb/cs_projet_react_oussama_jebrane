@@ -1,9 +1,73 @@
+import { useContext } from "react";
+import { PageTitle } from "../../layouts/pageTitle/PageTitle";
 import "./_fav.scss";
+import { Info } from "../../App";
 
-export const Fav = () =>{
-    return(
+export const Fav = () => {
+    const allValues = useContext(Info);
+    const allInfo = allValues.allInfo[0]
+    const [favProd, setFavProd] = allValues.favProd;
+
+
+    return (
         <>
-            <h1>This is Fav</h1>
+            <div className="favPage">
+                <PageTitle>FAVORITES</PageTitle>
+                <div className="container text-center p-2">
+                    <div className="row">
+                        <div className="col">
+                            <h1>Product</h1>
+                        </div>
+                        <div className="col">
+                            <h1>Price</h1>
+                        </div>
+                        <div className="col">
+                            <h1>Quantity</h1>
+                        </div>
+                        <div className="col">
+                            <h1>Total</h1>
+                        </div>
+                        <div className="col">
+                            <h1>Add</h1>
+                        </div>
+                    </div>
+                </div>
+                <div className="container text-center">
+                    {
+                        favProd.map((element, index) =>
+                            <>
+                                <div className="row favItems">
+                                    <div className="col d-flex align-items-center gap-1">
+                                        <img src={element.src} alt="" />
+                                        <h4>{element.name}</h4>
+                                    </div>
+                                    <div className="col">
+                                        <h4>${element.price}</h4>
+                                    </div>
+                                    <div className="col">
+                                        <div className="d-flex justify-content-center">
+                                            <button className="favBtn btn" onClick={() =>{
+                                                allValues.remove(element, setFavProd)
+                                            }}>-</button>
+                                            <button className="btn fw-bold fs-4">{element.amount}</button>
+                                            <button className="favBtn btn" onClick={() =>{
+                                                allValues.add(element, setFavProd)
+                                            }}>+</button>
+                                        </div>
+                                    </div>
+                                    <div className="col">
+                                        <h4>${element.price * element.amount}</h4>
+                                    </div>
+                                    <div className="col">
+                                        <button className="btn btn-dark rounded-pill">Add to Basket</button>
+                                    </div>
+                                </div>
+                            </>
+                        )
+                    }
+                </div>
+            </div>
+
         </>
     )
 }

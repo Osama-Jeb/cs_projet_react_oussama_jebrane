@@ -1,14 +1,13 @@
 import React from "react";
 import "./_about.scss";
 import aboutHangar from "../../assets/images/aboutHangar.jpg"
+import { PageTitle } from "../../layouts/pageTitle/PageTitle";
 
 export const About = () => {
   return (
     <>
       <div className="about">
-        <div className="aboutHero">
-          <h1 className="text-light fw-bolder">ABOUT</h1>
-        </div>
+        <PageTitle>ABOUT</PageTitle>
         <div className="aboutInfo container d-flex flex-column flex-md-row gap-2 p-3">
             <img src={aboutHangar} alt="" />
             <div className="aboutText d-flex flex-column align-items-start">
