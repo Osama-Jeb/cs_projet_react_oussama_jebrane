@@ -8,4 +8,9 @@
         box-shadow: 0px 0px 10px gray;
         transform: rotateX(30deg);
     }
+    @media (min-width: 375px) and (max-width: 425px){
+        img{
+            width: 80vw;
+        }
+    }
 }

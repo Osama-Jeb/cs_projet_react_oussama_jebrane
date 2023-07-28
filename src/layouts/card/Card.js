@@ -55,11 +55,41 @@ export const Card = (props) => {
                 </div>
                 <img src={props.myObject.src} alt="" />
                 <span className="btnTag text-light">{props.myObject.tag}</span>
+                <>
+                    {
+                        props.myObject.tag === "new" ?
+                            <>
+                                <span className="btnTag bg-success rounded-pill ps-1 pe-1 text-light">{props.myObject.tag}</span>
+                            </>
+                            : props.myObject.tag === "old" ?
+                                <>
+                                    <span className="btnTag bg-primary rounded-pill ps-1 pe-1 text-light">{props.myObject.tag}</span>
+                                </>
+                                :
+                                <>
+                                    <span className="btnTag aniSale bg-danger rounded-pill ps-1 pe-1 text-light">{props.myObject.tag}</span>
+                                </>
+                    }
+                </>
                 <NavLink to={`/product/${props.myObject.name}`}>
                     <button className="btnProd rounded-pill">To Product</button>
                 </NavLink>
-                <p>{props.myObject.categorie}: {props.myObject.name}</p>
-                <p>{props.myObject.price} $</p>
+                <p className="text-uppercase">{props.myObject.categorie}: {props.myObject.name}</p>
+                <>
+                    {
+                        props.myObject.tag === "sale" ?
+                            <>
+                                <div className="d-flex">
+                                    <p className="strike">${props.myObject.price}</p>
+                                    <p className="text-danger aniSale">${props.myObject.price * 0.2}</p>
+                                </div>
+                            </>
+                            :
+                            <>
+                                <p>${props.myObject.price}</p>
+                            </>
+                    }
+                </>
             </div>
         </>
     )

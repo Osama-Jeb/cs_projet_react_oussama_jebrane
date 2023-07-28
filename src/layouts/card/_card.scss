@@ -1,10 +1,11 @@
 .prodCard {
     position: relative;
     height: fit-content;
-    width: 275px;
+    width: 19vw;
     transition: all 0.5s;
     box-shadow: 1px 1px 10px gray;
     border-radius: 15px;
+
 
     img {
         height: 45vh;
@@ -66,6 +67,16 @@
     }
 }
 
+@media (min-width: 375px) and (max-width: 425px) {
+    .prodCard {
+        width: 80vw;
+    }
+}
+
+.strike {
+    text-decoration: line-through;
+}
+
 .prodCard:hover {
     transform: scale(1.1);
     border-radius: 15px;
@@ -101,5 +112,19 @@
 
     100% {
         transform: rotateY(360deg);
+    }
+}
+
+.aniSale {
+    animation: aniSale 1s infinite alternate;
+}
+
+@keyframes aniSale {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.2);
     }
 }
