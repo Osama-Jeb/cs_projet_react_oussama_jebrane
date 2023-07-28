@@ -5,9 +5,20 @@ import { Info } from "../../App";
 
 export const Fav = () => {
     const allValues = useContext(Info);
-    const allInfo = allValues.allInfo[0]
     const [favProd, setFavProd] = allValues.favProd;
+    const [basketProd, setBasketProd] = allValues.basketProd;
 
+    const addToBasket = (element, index) =>{
+        let newFav = [...favProd];
+        let newBask = [...basketProd]
+        let newItem = newFav[index];
+        newFav.splice(index, 1);
+        setFavProd(newFav)
+        let find = newBask.find(el => el.name === newItem.name);
+        if (find === undefined){
+            setBasketProd([...basketProd, newItem])
+        }
+    }
 
     return (
         <>
@@ -59,7 +70,9 @@ export const Fav = () => {
                                         <h4>${element.price * element.amount}</h4>
                                     </div>
                                     <div className="col">
-                                        <button className="btn btn-dark rounded-pill">Add to Basket</button>
+                                        <button className="btn btn-dark rounded-pill" onClick={() =>{
+                                            addToBasket(element, index)
+                                        }}>Add to Basket</button>
                                     </div>
                                 </div>
                             </>

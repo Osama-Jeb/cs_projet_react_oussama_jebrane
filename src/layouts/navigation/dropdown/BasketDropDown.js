@@ -49,7 +49,7 @@ export const BasketDropDown = () => {
                                                             <div className="">
                                                                 <h4 className="fw-bold text-uppercase">{element.name}</h4>
                                                                 <p>{element.desc}</p>
-                                                                <p>{element.amount * element.price}</p>
+                                                                <p>{element.amount} X {element.price}$</p>
                                                             </div>
                                                         </div>
                                                     </>
