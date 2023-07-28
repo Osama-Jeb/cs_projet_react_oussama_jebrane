@@ -1,5 +1,5 @@
 .productGroup {
-    button {
+    .catBtn {
         background-color: transparent;
         outline: none;
         border: none;
@@ -17,9 +17,16 @@
         border-bottom: none !important;
 
         .allProd {
-            display: grid;
-            grid-template-columns: repeat(3, 350px);
-            grid-template-rows: 400px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 50px;
+        }
+
+        @media (min-width: 375px) and (max-width: 768px) {
+            .allProd {
+                display: flex;
+                flex-wrap: wrap;
+            }
         }
     }
 }

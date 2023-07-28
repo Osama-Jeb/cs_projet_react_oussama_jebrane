@@ -12,35 +12,36 @@ export const OurProducts = () => {
     const [old, setOld] = useState([]);
     const [sale, setSale] = useState([]);
 
+    // Helper function to get a random element from an array
+    const getRandomElement = (array) => array[Math.floor(Math.random() * array.length)];
+
+    // Helper function to filter items based on their tag
+    const filterItemsByTag = (array, tag) => array.filter((element) => element.tag === tag);
+
+    // Main useEffect
     useEffect(() => {
-        // Process the elements in 'allInfo' array and group them based on 'tag'
-        const bestSellingList = [];
-        const newProdList = [];
-        const oldList = [];
-        const saleList = [];
+        if (allInfo.length === 0) return; // Ensure allInfo is not empty before proceeding
 
-        for (let index = 0; index < allInfo.length; index++) {
-            let element = allInfo[index];
-            if (element.tag === "best seller") {
-                bestSellingList.push(element);
-            }
-            if (element.tag === "new") {
-                newProdList.push(element);
-            }
-            if (element.tag === "old") {
-                oldList.push(element);
-            }
-            if (element.tag === "sale") {
-                saleList.push(element);
-            }
-        }
+        // Get 4 random elements for bestSelling
+        const tempBest = Array.from({ length: 4 }, () => getRandomElement(allInfo));
 
-        // Update the state once after processing all elements
-        setBestSelling(bestSellingList);
-        setNewProd(newProdList);
-        setOld(oldList);
-        setSale(saleList);
-    }, [allInfo]); // Only re-run the effect if 'allInfo' changes
+        // Filter items based on their tag
+        const tempNew = filterItemsByTag(allInfo, "new");
+        const tempOld = filterItemsByTag(allInfo, "old");
+        const tempSale = filterItemsByTag(allInfo, "sale");
+
+        // Get 4 random elements from each filtered list
+        const tempNew4 = Array.from({ length: 4 }, () => getRandomElement(tempNew));
+        const tempOld4 = Array.from({ length: 4 }, () => getRandomElement(tempOld));
+        const tempSale4 = Array.from({ length: 4 }, () => getRandomElement(tempSale));
+
+        // Update state with the new arrays
+        setBestSelling(tempBest);
+        setNewProd(tempNew4);
+        setOld(tempOld4);
+        setSale(tempSale4);
+    }, [allInfo]);
+
 
 
     return (

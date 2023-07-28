@@ -54,8 +54,9 @@ export const Card = (props) => {
                     </div>
                 </div>
                 <img src={props.myObject.src} alt="" />
+                <span className="btnTag text-light">{props.myObject.tag}</span>
                 <NavLink to={`/product/${props.myObject.name}`}>
-                    <button className="btn btnTag btn-primary rounded-pill">{props.myObject.tag}</button>
+                    <button className="btnProd rounded-pill">To Product</button>
                 </NavLink>
                 <p>{props.myObject.categorie}: {props.myObject.name}</p>
                 <p>{props.myObject.price} $</p>
