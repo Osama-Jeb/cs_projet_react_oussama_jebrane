@@ -9,31 +9,6 @@ export const Basket = () => {
     const allValues = useContext(Info);
     const [basketProd, setBasketProd] = allValues.basketProd;
 
-    // const add = (element) => {
-    //     let newArr = [...basketProd]
-    //     let newItem = { ...element }
-    //     const findItemIndex = newArr.findIndex(el => el.name === element.name);
-
-    //     newItem.amount += 1;
-
-    //     newArr.splice(findItemIndex, 1, newItem);
-    //     setBasketProd(newArr);
-    // }
-
-    // const remove = (element) =>{
-    //     let newArr = [...basketProd];
-    //     let newItem = {...element};
-    //     const findItemIndex = newArr.findIndex(el => el.name === element.name);
-
-    //     newItem.amount -= 1;
-    //     if (newItem.amount) {
-    //         newArr.splice(findItemIndex, 1, newItem)
-    //     } else {
-    //         newArr.splice(findItemIndex, 1);
-    //     }
-    //     setBasketProd(newArr)
-    // }
-
     return (
         <>
             <div className="basketPage">
@@ -76,11 +51,11 @@ export const Basket = () => {
                                                     </div>
                                                     <div className="col">
                                                         <div className="d-flex justify-content-center">
-                                                            <button className="basketBtn btn" onClick={() =>{
+                                                            <button className="basketBtn btn" onClick={() => {
                                                                 allValues.remove(element, setBasketProd)
                                                             }}>-</button>
                                                             <button className="btn fw-bold fs-4">{element.amount}</button>
-                                                            <button className="basketBtn btn" onClick={()=>{
+                                                            <button className="basketBtn btn" onClick={() => {
                                                                 allValues.add(element, setBasketProd)
                                                             }}>+</button>
                                                         </div>

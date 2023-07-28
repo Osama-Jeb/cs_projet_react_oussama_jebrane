@@ -1,4 +1,4 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import { Error } from "./Error";
 import { Home } from "./pages/home/Home";
@@ -10,6 +10,7 @@ import { Basket } from "./pages/basket/Basket";
 import { Product } from "./pages/product/Product";
 import { allProducts } from "./variables";
 import { Footer } from "./layouts/footer/Footer";
+import { ProductUnique } from "./pages/product/productUnique/ProductUnique";
 
 //! REMEMBER TO CHANGE IMAGES FROM Px TO VW FOR RESPONSIVITY
 
@@ -63,15 +64,17 @@ export const App = () => {
   // Usage
   const add = (element, setList) => {
     updateBasket(element, setList, "add");
-    calcTotal();
   };
 
   const remove = (element, setList) => {
     updateBasket(element, setList, "remove");
-    calcTotal();
   };
 
-  const calcTotal = () =>{
+  useEffect(() => {
+    calcTotal();
+  }, [basketProd]);
+
+  const calcTotal = () => {
     let newArr = [...basketProd]
     let temp = 0;
     for (let index = 0; index < newArr.length; index++) {
@@ -88,7 +91,7 @@ export const App = () => {
     basketProd: [basketProd, setBasketProd],
     showFav: [showFav, setShowFav],
     showBasket: [showBasket, setShowBasket],
-    total : [total, setTotal],
+    total: [total, setTotal],
     changeShowDrop: changeShowDrop,
     add: add,
     remove: remove,
@@ -107,6 +110,7 @@ export const App = () => {
           <Route path="/fav" element={<Fav />} />
           <Route path="/basket" element={<Basket />} />
           <Route path="/product" element={<Product />} />
+          <Route path="/product/:id" element={<ProductUnique />} />
         </Routes>
         <Footer />
       </Info.Provider>

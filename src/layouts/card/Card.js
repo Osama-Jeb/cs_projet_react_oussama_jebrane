@@ -4,6 +4,7 @@ import { faHeart } from "@fortawesome/free-regular-svg-icons";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import { useContext } from "react";
 import { Info } from "../../App";
+import { NavLink } from "react-router-dom";
 
 export const Card = (props) => {
 
@@ -40,7 +41,8 @@ export const Card = (props) => {
     return (
         <>
             <div className="prodCard m-1">
-                <div className="darkness"></div>
+                <div className="darkness">
+                </div>
                 <div className="text">
                     <div className="icons d-flex">
                         <button className="btnFav btn fs-3" onClick={toFav} >
@@ -52,7 +54,9 @@ export const Card = (props) => {
                     </div>
                 </div>
                 <img src={props.myObject.src} alt="" />
-                <button className="btn btnTag btn-primary rounded-pill">{props.myObject.tag}</button>
+                <NavLink to={`/product/${props.myObject.name}`}>
+                    <button className="btn btnTag btn-primary rounded-pill">{props.myObject.tag}</button>
+                </NavLink>
                 <p>{props.myObject.categorie}: {props.myObject.name}</p>
                 <p>{props.myObject.price} $</p>
             </div>
