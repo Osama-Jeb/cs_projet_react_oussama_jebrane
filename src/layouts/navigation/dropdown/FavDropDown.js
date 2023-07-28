@@ -24,7 +24,7 @@ export const FavDropDown = () => {
     return (
         <>
             <div className="favDropdown">
-                <button className="favBtn btn" onClick={(event) =>{
+                <button className="favBtn btn" onClick={(event) => {
                     allValues.changeShowDrop(event)
                 }}>
                     <h4>
@@ -40,29 +40,40 @@ export const FavDropDown = () => {
                                 transition={{ delay: 0.25, duration: 0.5 }}
                                 exit={{ opacity: 0, y: -100 }}
                             >
-                                <h3 className="text-secondary m-1"> Add something</h3>
-                                {
-                                    favProd.map((element, index) =>
-                                        <>
-                                            <div className="favItem d-flex align-items-center gap-2 m-1">
-                                                <img src={element.src} alt="" />
-                                                <div className="d-flex align-items-center flex-column">
-                                                    <h4 className="fw-bold text-uppercase">{element.name}</h4>
-                                                    <div className="d-flex w-100  gap-1 justify-content-center">
-                                                        <button className="btn text-danger" onClick={() =>{
-                                                            removeFav(element)
-                                                        }}>
-                                                            <FaHeartBroken />
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </>
-                                    )
-                                }
+                                <>
+                                    {
+                                        favProd.length === 0 ?
+                                            <h3 className="text-secondary m-1"> Add something</h3>
+                                            :
+                                            <>
+                                                {
+                                                    favProd.map((element, index) =>
+                                                        <>
+                                                            <div className="favItem d-flex align-items-center gap-2 m-1">
+                                                                <img src={element.src} alt="" />
+                                                                <div className="d-flex align-items-center flex-column">
+                                                                    <h4 className="fw-bold text-uppercase">{element.name}</h4>
+                                                                <p>{element.desc}</p>
+                                                                <p>{element.amount} X {element.price}$</p>
+                                                                    <div className="d-flex w-100  gap-1 justify-content-center">
+                                                                        <button className="btn text-danger" onClick={() => {
+                                                                            removeFav(element)
+                                                                        }}>
+                                                                            <FaHeartBroken />
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </>
+                                                    )
+                                                }
+                                            </>
+                                    }
+                                </>
+
                                 <div className="d-flex justify-content-center">
                                     <NavLink to={"/fav"}>
-                                        <button className="btn btn-dark text-light rounded-pill ps-1 pe-1" onClick={() =>{
+                                        <button className="btn btn-dark text-light rounded-pill ps-1 pe-1" onClick={() => {
                                             setShowFav(false);
                                         }}>
                                             Go To Favorites
