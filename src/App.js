@@ -22,6 +22,7 @@ export const App = () => {
   const [basketProd, setBasketProd] = useState([])
   const [showFav, setShowFav] = useState(false);
   const [showBasket, setShowBasket] = useState(false);
+  const [total, setTotal] = useState(0)
 
   const changeShowDrop = (event) => {
     switch (event.target.classList[0]) {
@@ -62,11 +63,23 @@ export const App = () => {
   // Usage
   const add = (element, setList) => {
     updateBasket(element, setList, "add");
+    calcTotal();
   };
 
   const remove = (element, setList) => {
     updateBasket(element, setList, "remove");
+    calcTotal();
   };
+
+  const calcTotal = () =>{
+    let newArr = [...basketProd]
+    let temp = 0;
+    for (let index = 0; index < newArr.length; index++) {
+      let element = newArr[index];
+      temp += element.price * element.amount
+    }
+    setTotal(temp)
+  }
 
 
   const allValues = {
@@ -75,9 +88,11 @@ export const App = () => {
     basketProd: [basketProd, setBasketProd],
     showFav: [showFav, setShowFav],
     showBasket: [showBasket, setShowBasket],
+    total : [total, setTotal],
     changeShowDrop: changeShowDrop,
     add: add,
     remove: remove,
+    calcTotal: calcTotal,
   }
 
   return (

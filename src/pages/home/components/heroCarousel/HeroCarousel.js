@@ -8,7 +8,7 @@ export const HeroCarousel = () => {
     //todo : convert to array.map
     return (
         <>
-            <div className="heroCarousel">
+            <div className="heroCarousel mt-0 mt-md-1">
                 <div id="carouselExampleDark" className="carousel carousel-dark slide" data-bs-ride="carousel" >
                     <div className="carousel-inner">
                         <div className="carousel-item active" data-bs-interval={2000}>

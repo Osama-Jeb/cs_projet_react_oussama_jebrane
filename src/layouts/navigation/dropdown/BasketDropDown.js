@@ -13,6 +13,7 @@ export const BasketDropDown = () => {
     const [basketProd, setBasketProd] = allValues.basketProd;
     const [showBasket, setShowBasket] = allValues.showBasket;
 
+
     return (
         <>
             <div className="basketDropdown">
@@ -64,7 +65,7 @@ export const BasketDropDown = () => {
                                             Go To Your Basket
                                         </button>
                                     </NavLink>
-                                    <p className="m-0">TOTAL</p>
+                                    <p className="m-0">TOTAL:{allValues.total[0]}$</p>
                                 </div>
                             </motion.div>
                         </>

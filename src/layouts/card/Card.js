@@ -28,10 +28,12 @@ export const Card = (props) => {
 
     const toBasket = (event) => {
         updateList(event, props.myObject, basketProd, setBasketProd);
+        allValues.calcTotal();
     };
 
     const toFav = (event) => {
         updateList(event, props.myObject, favProd, setFavProd);
+        allValues.calcTotal();
     };
 
 
