@@ -40,7 +40,7 @@ export const Home = () => {
           <AnimatePresence>
             {
               showVid && <>
-                <motion.div className="position-fixed bg-success top-50 start-50 z-3 translate-middle"
+                <motion.div className="position-fixed top-50 start-50 z-3 translate-middle"
                   initial={{ y: 100, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
                   transition={{ duration: 0.5, delay: 0.5 }}

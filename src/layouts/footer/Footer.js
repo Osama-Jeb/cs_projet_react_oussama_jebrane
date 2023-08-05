@@ -1,8 +1,11 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./_footer.scss";
 import { faCcMastercard, faCcPaypal, faCcVisa, faFacebookF, faInstagram, faPaypal, faPinterestP, faSnapchatGhost, faYoutube } from "@fortawesome/free-brands-svg-icons";
+import { NavLink } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 export const Footer = () => {
+    const footLinks = ["Product", "About", "Contact"];
     return (
         <>
             <footer className="bg-gray">
@@ -18,12 +21,17 @@ export const Footer = () => {
                             <FontAwesomeIcon icon={faYoutube} />
                         </div>
                     </div>
-                    <div className="links d-flex align-items-center flex-column">
+                    <div className="links d-flex gap-1 align-items-center flex-column">
                         <h3>LINKS</h3>
-                        <p>Search</p>
-                        <p>About Us</p>
-                        <p>Contact Us</p>
-                        <p>Returns</p>
+                        {
+                            footLinks.map((element, index) =>
+                                <>
+                                    <HashLink className="footLink" to={`/${element.toLowerCase()}#top`}>
+                                        {element}
+                                    </HashLink>
+                                </>
+                            )
+                        }
                     </div>
                     <div className="links d-flex align-items-center flex-column">
                         <h3>LINKS</h3>

@@ -1,4 +1,13 @@
 footer{
     padding: 50px;
     text-align: center;
+    .footLink{
+        text-decoration: none;
+        color: black;
+        transition: all 0.5s;
+    }
+    .footLink:hover{
+        color: red;
+        transform: scale(1.1);
+    }
 }

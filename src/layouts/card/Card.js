@@ -74,7 +74,7 @@ export const Card = (props) => {
                 <NavLink to={`/product/${props.myObject.name}`}>
                     <button className="btnProd rounded-pill">To Product</button>
                 </NavLink>
-                <p className="text-uppercase">{props.myObject.categorie}: {props.myObject.name}</p>
+                <p className="text-uppercase mt-1"><b>{props.myObject.categorie}</b>: {props.myObject.name}</p>
                 <>
                     {
                         props.myObject.tag === "sale" ?
@@ -86,7 +86,7 @@ export const Card = (props) => {
                             </>
                             :
                             <>
-                                <p>${props.myObject.price}</p>
+                                <h4 className="ms-1"><b>${props.myObject.price}</b></h4>
                             </>
                     }
                 </>

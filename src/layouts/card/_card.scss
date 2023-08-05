@@ -72,6 +72,11 @@
         width: 80vw;
     }
 }
+@media (min-width: 426px) and (max-width: 768px) {
+    .prodCard {
+        width: 35vw;
+    }
+}
 
 .strike {
     text-decoration: line-through;

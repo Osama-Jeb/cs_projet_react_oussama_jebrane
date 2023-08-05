@@ -46,17 +46,17 @@ export const ProductUnique = () => {
     return (
         <>
             <PageTitle><h1 className="text-uppercase fw-bolder">{id}</h1></PageTitle>
-            <div className="container prodUnique p-3 d-flex align-items-center justify-content-around flex-column flex-md-row">
+            <div className="container prodUnique p-3 d-flex gap-3 align-items-center justify-content-around flex-column flex-md-row">
                 {
                     allInfo.map((element, index) =>
                         element.name === id ?
                             <>
                                 <img src={element.src} alt="" />
                                 <div>
-                                    <div className="d-flex align-items-center flex-column">
+                                    <div className="d-flex align-items-center align-items-md-start mb-4 flex-column">
                                         <h1 className="text-uppercase">{element.name}</h1>
                                         <h4>{element.desc}</h4>
-                                        <h4>{element.price}$</h4>
+                                        <h2 className="fw-bold">{element.price}$</h2>
                                     </div>
                                     <div>
                                         <div className="d-flex justify-content-center">

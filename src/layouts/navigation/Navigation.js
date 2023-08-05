@@ -6,6 +6,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion"
 import { FaGripLines } from "react-icons/fa"
 import { RxCross1 } from "react-icons/rx"
+import { HashLink } from "react-router-hash-link";
 
 export const Navigation = () => {
     const myNavs = ["Home", "About", "Contact", "Product"]
@@ -30,7 +31,7 @@ export const Navigation = () => {
                     {
                         myNavs.map((element, index) =>
                             <>
-                                <NavLink to={index === 0 ? "/" : `/${element.toLowerCase()}`}>{element}</NavLink>
+                                <HashLink to={index === 0 ? "/#top" : `/${element.toLowerCase()}#top`}>{element}</HashLink>
                             </>
                         )
                     }

@@ -36,7 +36,7 @@ export const FavDropDown = () => {
                         showFav && <>
                             <motion.div className="favMenu"
                                 initial={{ y: -100, opacity: 0 }}
-                                animate={{ y: 10, opacity: 1 }}
+                                animate={{ y: "1vh", opacity: 1 }}
                                 transition={{ delay: 0.25, duration: 0.5 }}
                                 exit={{ opacity: 0, y: -100 }}
                             >
@@ -53,7 +53,6 @@ export const FavDropDown = () => {
                                                                 <img src={element.src} alt="" />
                                                                 <div className="d-flex align-items-center flex-column">
                                                                     <h4 className="fw-bold text-uppercase">{element.name}</h4>
-                                                                <p>{element.desc}</p>
                                                                 <p>{element.amount} X {element.price}$</p>
                                                                     <div className="d-flex w-100  gap-1 justify-content-center">
                                                                         <button className="btn text-danger" onClick={() => {

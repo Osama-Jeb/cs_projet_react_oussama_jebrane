@@ -30,7 +30,7 @@ export const BasketDropDown = () => {
                         showBasket && <>
                             <motion.div className="basketMenu"
                                 initial={{ y: -100, opacity: 0 }}
-                                animate={{ y: 10, opacity: 1 }}
+                                animate={{ y: "1vh", opacity: 1 }}
                                 transition={{ delay: 0.25, duration: 0.5 }}
                                 exit={{ opacity: 0, y: -100 }}
                             >
@@ -44,11 +44,10 @@ export const BasketDropDown = () => {
                                             {
                                                 basketProd.map((element, index) =>
                                                     <>
-                                                        <div className="basketItem d-flex align-items-center gap-1">
+                                                        <div className="basketItem d-flex align-items-center gap-1 mb-2">
                                                             <img src={element.src} alt="" />
                                                             <div className="">
                                                                 <h4 className="fw-bold text-uppercase">{element.name}</h4>
-                                                                <p>{element.desc}</p>
                                                                 <p>{element.amount} X {element.price}$</p>
                                                             </div>
                                                         </div>
